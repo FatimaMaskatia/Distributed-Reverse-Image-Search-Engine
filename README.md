@@ -8,31 +8,7 @@ The full implementation was built and tested on the complete Weather Image Datas
 To use the full dataset:
 1. Download it from Kaggle
 2. Extract and place it at dataset/Weather_Dataset/
-3. The folder structure should match what is shown above
 ---
-
-## Project Structure
-PDC-Project/
-├── Traditional Feature Descriptors.py                  
-├── 
-├── dataset/
-│   └── Weather_Dataset/    
-│       ├── dew/
-│       ├── fogsmog/
-│       ├── frost/
-│       ├── glaze/
-│       ├── hail/
-│       ├── lightning/
-│       ├── rain/
-│       ├── rainbow/
-│       ├── rime/
-│       ├── sandstorm/
-│       └── snow/
-├── features_output/         # Generated after running option 1
-│   ├── features.npy
-│   └── image_paths.npy
-└── readme.md
-
 
 ## Setup
 Python 3.8+
