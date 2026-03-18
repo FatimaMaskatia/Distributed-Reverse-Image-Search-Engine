@@ -9,14 +9,12 @@ DATASET_PATH = "dataset/Weather_Dataset"
 FEATURE_FILE = "features_output/features.npy"
 PATH_FILE    = "features_output/image_paths.npy"
 
-
 # image loader
 def load_image(path):
     img = cv2.imread(path)
     if img is None:
         return None
     return cv2.resize(img, (224, 224))
-
 
 # ORB feature extraction
 def extract_orb(image):
@@ -43,7 +41,6 @@ def extract_sift(image):
 
     return descriptors.astype(np.float32).mean(axis=0)
 
-
 # color histogram (BGR + HSV)
 def extract_color_hist(image):
     # BGR histogram
@@ -65,7 +62,6 @@ def extract_features(image):
     color_features = extract_color_hist(image)
 
     return np.concatenate([orb_features, sift_features, color_features])
-
 
 # process single image
 def process_image(path):
