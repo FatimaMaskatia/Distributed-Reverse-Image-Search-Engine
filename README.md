@@ -6,7 +6,7 @@ approximate nearest neighbour searchusing feature extraction.
 A sample dataset is included in the repository containing a small number of images from each weather category for quick testing.
 The full implementation was built and tested on the complete Weather Image Dataset (6,378 images) available on Kaggle: https://www.kaggle.com/datasets/jehanbhathena/weather-dataset
 
-System Requirements
+### System Requirements:
 Python (3.8 or higher)
 RAM (8 GB recommended)
 GPU (Optional - CUDA for 3rd module)
