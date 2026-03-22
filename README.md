@@ -96,13 +96,13 @@ Run all cells in order
 fused_features.npy — final fused matrix of shape [N, 3232]
 master_alignment_map.csv — maps each image to its index in all three feature arrays
 
-# If don't want to run on google colab, remove the Google Drive parts and use local paths instead.
-# Remove these lines:
+### If don't want to run on google colab, remove the Google Drive parts and use local paths instead.
+### Remove these lines:
 from google.colab import drive
 drive.mount('/content/drive')
 BASE_PATH = "/content/drive/MyDrive/PDC_Project_M1/"
-# Replace with:
+### Replace with:
 BASE_PATH = "./"  # or where your files are
 
-# Install the required libraries:
+### Install the required libraries:
 pip install numpy pandas scikit-learn
