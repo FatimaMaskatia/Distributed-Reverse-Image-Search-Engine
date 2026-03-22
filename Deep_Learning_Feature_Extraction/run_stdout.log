@@ -1,0 +1,4 @@
+Extracted vectors: 6378
+Feature dimension: 512
+Saved: outputs\features.npy
+Saved: outputs\metadata.csv
