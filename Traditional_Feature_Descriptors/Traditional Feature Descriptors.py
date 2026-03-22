@@ -9,7 +9,6 @@ DATASET_PATH = "dataset/Weather_Dataset"
 FEATURE_FILE = "features_output/features.npy"
 PATH_FILE    = "features_output/image_paths.npy"
 
-
 # image loader
 def load_image(path):
     img = cv2.imread(path)
@@ -121,7 +120,6 @@ def build_feature_database():
     print("Feature matrix shape:", features.shape)
     print("Execution time:", round(end - start, 2), "seconds")
 
-
 # cosine similarity
 def cosine_similarity(a, b):
     denom = np.linalg.norm(a) * np.linalg.norm(b)
@@ -129,8 +127,7 @@ def cosine_similarity(a, b):
         return 0.0
     return np.dot(a, b) / denom
 
-
-# search similar images
+# search top 5 similar images
 def search_similar(query_image, top_k=5):
     features = np.load(FEATURE_FILE)
     paths    = np.load(PATH_FILE, allow_pickle=True)
