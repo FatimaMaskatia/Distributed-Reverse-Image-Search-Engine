@@ -83,9 +83,9 @@ All output files from Modules 1, 2, and 3
 ### Setup
 Upload these files to Google Drive under PDC_Project_M1/:
 Files:
-Source hash_results.json (Raviha's output)
-features.npy + image_paths.npy (Fatima's output)
-features.npy + metadata.csv (Arham's output)
+Source hash_results.json (Module 1 output)
+features.npy + image_paths.npy (Module 2 output)
+features.npy + metadata.csv (Module 3 output)
 
 ### Run
 Open notebook in Google Colab
@@ -93,8 +93,8 @@ Mount Google Drive when prompted
 Run all cells in order
 
 ### Output
-fused_features.npy — final fused matrix of shape [N, 3232]
-master_alignment_map.csv — maps each image to its index in all three feature arrays
+fused_features.npy: final fused matrix of shape [N, 1184]
+master_alignment_map.csv: maps each image to its index in all three feature arrays
 
 ### If don't want to run on google colab, remove the Google Drive parts and use local paths instead.
 ### Remove these lines:
