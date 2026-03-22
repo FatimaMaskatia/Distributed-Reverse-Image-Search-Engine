@@ -9,7 +9,7 @@ pip install pillow
 pip install tqdm
 
 How to run:
-python main.py
+python Traditional Features Descriptors.py
 
 Then it shows 2 options:
 1: Build feature database
