@@ -1,13 +1,19 @@
 ## Milestone 3 — Incremental Updates & Concurrency Testing
 ### run
+```
 pip install readerwriterlock
+```
 
 - lsh_index.py is the file from milestone 2 with few modificaions: insert_image() added and locks upgraded
 
-### run the files:
-1. Run:
+---
 
+### run the files:
+
+### Run:
+```
 python stress_test.py
+```
 
 In stress_test.py:
 update DATA_PATH = r"C:\Users\maska\OneDrive\Desktop\PDC Project\..." to wherever your fused_features.npy is.
@@ -22,9 +28,13 @@ What this validates?
 3. Every inserted image is present in the partition maps after the test.
 4. Measures query throughput, insert throughput, and latency (P50/P95/P99).
 
+---
 
-2. Run:
+### Run:
+
+```
 python test_incremental.py
+```
 
 This file is for unit tests for incremental index updates.
 Test include:
@@ -38,4 +48,7 @@ Test include:
 8.  test_inserted_image_is_findable   — inserted image found with its own vector
 9.  test_partition_lock_isolation     — inserts on different partitions don't block
 10. test_latency_tracking             — query latencies recorded correctly
+---
+
+
 
