@@ -1,0 +1,33 @@
+Inter-Node Communication Optimization Report
+
+Dataset              : 7128 images, 1184-dim float32 vectors
+Simulated network    : 100.0 Mbps
+
+Compression Results
+-------------------
+Original vector size : 4736 bytes (float32)
+Compressed size      : 1184 bytes (uint8)
+Compression ratio    : 3.99x smaller
+
+Avg time WITHOUT compression : 18.209 ms
+Avg time WITH compression    : 5.071 ms
+Speed improvement            : 3.59x faster
+
+Payload WITHOUT compression  : 236939 bytes
+Payload WITH compression     : 59330 bytes
+
+Cosine similarity (roundtrip): 0.999464
+Accuracy loss                : 0.0536%
+
+Note: Total time includes simulated network transfer delay
+based on payload size and bandwidth. This reflects real
+distributed behaviour, smaller payload= faster transfer.
+
+Bottleneck Analysis
+-------------------
+Pickle serialization (baseline) : 0.130 ms
+Numpy binary serialization      : 0.416 ms  (0.31x)
+Numpy + compression             : 0.821 ms  (0.16x)
+
+Conclusion: bottleneck is payload SIZE not serialization format.
+Scalar quantization is the correct fix.
